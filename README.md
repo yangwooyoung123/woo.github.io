@@ -2,64 +2,110 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>산업대학교</title>
+    <title>웹 디자인 기능사</title>
+
     <style>
         /* reset */
-        * {margin: 0; padding: 0;}
-        .clearfix::before, .clearfix::after {display: block; content: ''; clear: both;}
+        * {margin: 0; padding: 0; font-size: 24px; color: #fff;}
+        a {color: #333; text-decoration: none;}
+        li {list-style: none;}
+        table {border-spacing: 0;}
+        .clearfix::before, .clearfix::after {display: block; content:''; clear:both;}
 
-        /* 레이아웃 */
-        #wrap {width: 1200px; margin: 0 auto;}
+        #wrap {width: 1200px; margin: 0px auto;}
 
         /* header */
-        #header {}
-        #header .logo {float: left; width: 250px; height: 100px; background: #888;}
-        #header .nav {float: left; width: 950px; height: 100px; background: #777;}
+        #header {text-align: center; background: #7e57c2;}
+        #header .logo {float: left; width:250px; height:100px; line-height: 100px; background: #d1c4e9;}
+        #header .nav {float: right; width:600px; margin-top: 28px; background: #b39ddb;}
+        #header .nav li {position: relative; float: left; width: 25%; text-align: center; }
+        #header .nav li a {padding: 10px; display: block; font-size: 20px; color: #fff; }
+        #header .nav li a:hover {background: rgba(0,0,0,0.4);}
+        #header .nav li ul.submenu {display: none; position: absolute; left: 0; top: 44px; background: #b39ddb;}
+        #header .nav li ul.submenu li {width: 100%; border-right: 0;}
 
         /* banner */
-        #banner {height: 300px; background: #666;}
+        #banner {text-align: center; height: 400px; line-height: 400px; background: #9575cd;}
 
         /* contents */
-        #contents {}
-        #contents > div {float: left; width: 400px; height: 200px;}
-        #contents > div.cont1 {background: #555;}
-        #contents > div.cont2 {background: #444;}
-        #contents > div.cont3 {background: #333;}
+        #contents {text-align: center;}
+        #contents > div {float: left; width: 33.333333%; height: 247px; line-height: 247px;}
+        #contents > div.cont1 {background: #7e57c2;}
+        #contents > div.cont2 {background: #673ab7;}
+        #contents > div.cont3 {background: #5e35b1 ;}
 
         /* footer */
-        #footer {}
-        #footer .foot1 {float: left; width: 200px; height: 100px; background: #888;}
-        #footer .foot2 {float: left; width: 800px; height: 100px; background: #777;}
-        #footer .foot3 {float: left; width: 200px; height: 100px; background: #666;}
+        #footer {height: 100px; line-height: 100px; text-align: center; }
+        #footer .foot1 {float: left; width: 200px; background: #5e35b1;}
+        #footer .foot2 {float: left; width: 800px; background: #512da8;}
+        #footer .foot3 {float: left; width: 200px; background: #4527a0;}
     </style>
 </head>
 <body>
     <div id="wrap">
-        <header id="header" class="clearfix">
-            <h1 class="logo">로고</h1>
-            <div class="nav">메뉴</div>
-        </header>
-        <!-- //header -->
-        
-        <section id="banner">
-            <h2>이미지 슬라이드</h2>
-        </section>
-        <!-- //banner -->
-        
-        <section id="contents" class="clearfix">
-            <div class="cont1"><h3>공지사항</h3></div>
-            <div class="cont2"><h3>갤러리</h3></div>
-            <div class="cont3"><h3>팝업</h3></div>
-        </section>
-        <!-- //contents -->
-            
-        <footer id="footer" class="clearfix">
-            <div class="foot1"><h3>로고</h3></div>
-            <div class="foot2"><h3>Copyright</h3></div>
-            <div class="foot3"><h3>SNS</h3></div>
-        </footer>
-        <!-- //footer -->
-    </div>
-    <!-- //wrap -->
+    <header id="header" class="clearfix">
+        <h1 class="logo">로고</h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">MENU-1</a>
+                    <ul class="submenu">
+                        <li><a href="#">subMenu-1</a></li>
+                        <li><a href="#">subMenu-2</a></li>
+                        <li><a href="#">subMenu-3</a></li>
+                        <li><a href="#">subMenu-4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MENU-2</a>
+                    <ul class="submenu">
+                        <li><a href="#">subMenu-1</a></li>
+                        <li><a href="#">subMenu-2</a></li>
+                        <li><a href="#">subMenu-3</a></li>
+                        <li><a href="#">subMenu-4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MENU-3</a>
+                    <ul class="submenu">
+                        <li><a href="#">subMenu-1</a></li>
+                        <li><a href="#">subMenu-2</a></li>
+                        <li><a href="#">subMenu-3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MENU-4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <section id="banner">
+        <h2>이미지 슬라이드</h2>
+    </section>
+    <!-- //banner -->
+
+    <section id="contents" class="clearfix">
+        <div class="cont1"><h3>공지사항</h3></div>
+        <div class="cont2"><h3>갤러리</h3></div>
+        <div class="cont3"><h3>팝업</h3></div>
+    </section>
+    <!-- //contents -->
+
+    <footer id="footer">
+        <div class="foot1"><h3>로고</h3></div>
+        <div class="foot2"><h3>Copyright</h3></div>
+        <div class="foot3"><h3>SNS</h3></div>
+    </footer>
+    <!-- //footer -->
+</div>
+    
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(".nav > ul > li").mouseover(function(){
+        $(this).find(".submenu").stop().slideDown(200);
+    });
+    $(".nav > ul > li").mouseout(function(){
+        $(this).find(".submenu").stop().slideUp(200);
+    });
+</script>
 </body>
 </html>
+
+
